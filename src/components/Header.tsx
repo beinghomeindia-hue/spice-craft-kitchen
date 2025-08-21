@@ -1,18 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, Search } from "lucide-react";
+import logo from "@/assets/beinghome.jpg";
 
 const Header = () => {
   return (
     <header className="bg-background text-foreground border-b border-border">
-      <div className="container mx-auto px-4 py-4">
+  <div className="container mx-auto px-2 py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center space-x-4">
-            <div className="p-3">
-              <h1 className="font-display font-bold text-2xl text-foreground">
-                Spice Route Co.
-              </h1>
-            </div>
+          <div className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="Spice Craft Kitchen Logo"
+              className="h-20 w-auto object-contain p-0 m-0"
+            />
           </div>
 
           {/* Navigation */}
@@ -32,7 +33,7 @@ const Header = () => {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-">
             <Button variant="ghost" size="icon" className="text-foreground hover:text-secondary">
               <Search className="h-5 w-5" />
             </Button>
