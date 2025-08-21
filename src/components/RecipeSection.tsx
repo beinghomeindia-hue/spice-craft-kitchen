@@ -1,12 +1,14 @@
 import recipeDishes from "@/assets/recipe-dishes.jpg";
 import pongal from "@/assets/pongal.jpg";
 import bisibele from "@/assets/bisibele.jpg";
+import biryani from "@/assets/biryani.jpg";
+import dalbati from "@/assets/dalbati.jpg";
 
 const RecipeSection = () => {
   const recipes = [
     {
       name: "Biryani",
-      image: recipeDishes,
+      image: biryani,
     },
     {
       name: "Bisi Bele Bath", 
@@ -17,8 +19,8 @@ const RecipeSection = () => {
       image: pongal,
     },
     {
-      name: "Dosa Pack",
-      image: recipeDishes,
+      name: "Dal Baati Churma",
+      image: dalbati,
     }
   ];
 
