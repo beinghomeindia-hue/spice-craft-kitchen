@@ -56,7 +56,7 @@ const Header = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent className="fixed inset-y-0 left-0 top-0 h-full w-64 rounded-none border-r bg-background flex flex-col p-6">
+              <DrawerContent className="fixed inset-y-0 right-0 top-0 h-full w-64 rounded-none border-l bg-background flex flex-col p-6">
                 <nav className="flex flex-col items-start space-y-6 mt-8">
                   <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     Home
