@@ -8,11 +8,12 @@ import {
   DrawerClose,
 } from "@/components/ui/drawer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-background text-foreground border-b border-border">
+    <header className="bg-background text-foreground border-b border-border fixed top-0 left-0 w-full z-50">
   <div className="container mx-auto px-2 py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
@@ -20,7 +21,8 @@ const Header = () => {
             <img
               src={logo}
               alt="Spice Craft Kitchen Logo"
-              className="h-20 w-auto object-contain p-0 m-0"
+              className="h-16 w-auto object-contain p-0 m-0 md:h-20"
+              style={{ maxWidth: "100%" }}
             />
           </div>
 
@@ -29,7 +31,17 @@ const Header = () => {
             <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground">
               Home
             </a>
-            <a href="#recipes" className="hover:text-secondary transition-colors font-medium text-foreground">
+            <a
+              href="#recipes"
+              className="hover:text-secondary transition-colors font-medium text-foreground"
+              onClick={e => {
+                e.preventDefault();
+                const el = document.getElementById("recipes");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               Shop by Recipe
             </a>
             <a href="#ingredients" className="hover:text-secondary transition-colors font-medium text-foreground">
@@ -58,18 +70,35 @@ const Header = () => {
               </DrawerTrigger>
               <DrawerContent className="fixed inset-y-0 right-0 top-0 h-full w-64 rounded-none border-l bg-background flex flex-col p-6">
                 <nav className="flex flex-col items-start space-y-6 mt-8">
-                  <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
+                  <button
+                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0"
+                    style={{ appearance: "none" }}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      setOpen(false);
+                    }}
+                  >
                     Home
-                  </a>
-                  <a href="#recipes" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
+                  </button>
+                  <button
+                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0"
+                    style={{ appearance: "none" }}
+                    onClick={() => {
+                      const el = document.getElementById("recipes");
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth" });
+                      }
+                      setOpen(false);
+                    }}
+                  >
                     Shop by Recipe
-                  </a>
-                  <a href="#ingredients" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
+                  </button>
+                  <Link to="/ingredients" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     Ingredients
-                  </a>
-                  <a href="#about" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
+                  </Link>
+                  <Link to="/about" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     About
-                  </a>
+                  </Link>
                 </nav>
                 <DrawerClose asChild>
                   <Button variant="outline" className="mt-auto w-full">Close</Button>
