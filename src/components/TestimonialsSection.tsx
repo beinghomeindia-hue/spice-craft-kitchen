@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+  <section className="py-20" style={{ backgroundColor: '#0C1612' }}>
       <div className="container mx-auto px-4">
         {/* Testimonials */}
         <div className="text-center mb-16">
