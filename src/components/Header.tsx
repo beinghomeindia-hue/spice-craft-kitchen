@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Menu, Search } from "lucide-react";
 import logo from "@/assets/beinghome.jpg";
+import {
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerClose,
+} from "@/components/ui/drawer";
+import { useState } from "react";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <header className="bg-background text-foreground border-b border-border">
   <div className="container mx-auto px-2 py-2">
@@ -37,13 +45,37 @@ const Header = () => {
             <Button variant="ghost" size="icon" className="text-foreground hover:text-secondary">
               <Search className="h-5 w-5" />
             </Button>
-              <Button className="font-medium text-white" style={{ backgroundColor: '#2D5033' }}>
-                <ShoppingCart className="h-4 w-4 mr-2" />
-                Cart
-              </Button>
-            <Button variant="ghost" size="icon" className="md:hidden text-foreground">
-              <Menu className="h-5 w-5" />
+            <Button className="font-medium text-white" style={{ backgroundColor: '#2D5033' }}>
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              Cart
             </Button>
+            {/* Mobile Drawer Trigger */}
+            <Drawer open={open} onOpenChange={setOpen}>
+              <DrawerTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden text-foreground">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <nav className="flex flex-col items-center space-y-4 py-6">
+                  <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                    Home
+                  </a>
+                  <a href="#recipes" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                    Shop by Recipe
+                  </a>
+                  <a href="#ingredients" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                    Ingredients
+                  </a>
+                  <a href="#about" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                    About
+                  </a>
+                  <DrawerClose asChild>
+                    <Button variant="outline" className="mt-4 w-full">Close</Button>
+                  </DrawerClose>
+                </nav>
+              </DrawerContent>
+            </Drawer>
           </div>
         </div>
       </div>
