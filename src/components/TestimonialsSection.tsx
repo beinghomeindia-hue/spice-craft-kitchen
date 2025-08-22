@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
         <div className="bg-muted/30 rounded-2xl p-8 lg:p-12">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <BookOpen className="h-8 w-8 text-secondary mr-3" />
+              <BookOpen className="h-8 w-8 mr-3" color="#2D5033" />
               <span className="text-secondary font-semibold tracking-wide uppercase text-sm">
                 <span style={{ color: '#2D5033' }}>Recipe Inspiration</span>
               </span>
