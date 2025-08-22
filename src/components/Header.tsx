@@ -56,24 +56,24 @@ const Header = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </DrawerTrigger>
-              <DrawerContent>
-                <nav className="flex flex-col items-center space-y-4 py-6">
-                  <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+              <DrawerContent className="fixed inset-y-0 left-0 top-0 h-full w-64 rounded-none border-r bg-background flex flex-col p-6">
+                <nav className="flex flex-col items-start space-y-6 mt-8">
+                  <a href="#" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     Home
                   </a>
-                  <a href="#recipes" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                  <a href="#recipes" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     Shop by Recipe
                   </a>
-                  <a href="#ingredients" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                  <a href="#ingredients" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     Ingredients
                   </a>
-                  <a href="#about" className="hover:text-secondary transition-colors font-medium text-foreground" onClick={() => setOpen(false)}>
+                  <a href="#about" className="hover:text-secondary transition-colors font-medium text-foreground text-lg" onClick={() => setOpen(false)}>
                     About
                   </a>
-                  <DrawerClose asChild>
-                    <Button variant="outline" className="mt-4 w-full">Close</Button>
-                  </DrawerClose>
                 </nav>
+                <DrawerClose asChild>
+                  <Button variant="outline" className="mt-auto w-full">Close</Button>
+                </DrawerClose>
               </DrawerContent>
             </Drawer>
           </div>
