@@ -37,10 +37,10 @@ const Header = () => {
             <Button variant="ghost" size="icon" className="text-foreground hover:text-secondary">
               <Search className="h-5 w-5" />
             </Button>
-            <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium">
-              <ShoppingCart className="h-4 w-4 mr-2" />
-              Cart
-            </Button>
+              <Button className="font-medium text-white" style={{ backgroundColor: '#2D5033' }}>
+                <ShoppingCart className="h-4 w-4 mr-2" />
+                Cart
+              </Button>
             <Button variant="ghost" size="icon" className="md:hidden text-foreground">
               <Menu className="h-5 w-5" />
             </Button>

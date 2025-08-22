@@ -48,6 +48,12 @@ const RecipeSection = () => {
                 <h3 className="text-xl font-semibold text-foreground">
                   {recipe.name}
                 </h3>
+                <button
+                  className="mt-4 px-6 py-2 rounded-lg text-white"
+                  style={{ backgroundColor: '#2D5033' }}
+                >
+                  View Recipe
+                </button>
               </div>
             </div>
           ))}

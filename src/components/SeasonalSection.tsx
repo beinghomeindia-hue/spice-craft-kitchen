@@ -14,7 +14,10 @@ const SeasonalSection = () => {
         </div>
 
         <div className="mb-12">
-          <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-4 rounded-full">
+          <Button
+            className="font-semibold px-8 py-4 rounded-full text-white"
+            style={{ backgroundColor: '#2D5033' }}
+          >
             Shop Seasonal Ingredients
           </Button>
         </div>

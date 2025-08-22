@@ -26,7 +26,7 @@ const Hero = () => {
             <h1 className="text-4xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
               Cook Authentic
               <span className="block text-foreground">Indian Meals with</span>
-              <span className="block text-secondary">Fresh Ingredient</span>
+              <span className="block" style={{ color: '#2D5033' }}>Fresh Ingredient</span>
               <span className="block text-foreground">Packs</span>
             </h1>
 
@@ -36,7 +36,11 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-4 text-lg rounded-full">
+              <Button
+                size="lg"
+                className="font-semibold px-8 py-4 text-lg rounded-full text-white"
+                style={{ backgroundColor: '#2D5033' }}
+              >
                 Shop Packs
               </Button>
               <Button variant="outline" size="lg" className="border-foreground text-foreground hover:bg-foreground hover:text-background font-semibold px-8 py-4 text-lg rounded-full">

@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
                 <div className="border-t pt-4">
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
                   <div className="text-sm text-muted-foreground mb-2">{testimonial.location}</div>
-                  <div className="text-xs bg-gradient-green text-secondary-foreground px-2 py-1 rounded-full inline-block">
+                  <div className="text-xs px-2 py-1 rounded-full inline-block" style={{ backgroundColor: '#2D5033', color: 'white' }}>
                     {testimonial.recipe}
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
             <div className="flex items-center justify-center mb-4">
               <BookOpen className="h-8 w-8 text-secondary mr-3" />
               <span className="text-secondary font-semibold tracking-wide uppercase text-sm">
-                Recipe Inspiration
+                <span style={{ color: '#2D5033' }}>Recipe Inspiration</span>
               </span>
             </div>
             <h3 className="text-3xl lg:text-4xl font-display font-bold text-foreground mb-4">
@@ -130,8 +130,12 @@ const TestimonialsSection = () => {
           </div>
 
           <div className="text-center">
-            <Button variant="outline" size="lg" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-8">
-              Browse All Recipes
+            <Button
+              size="lg"
+              className="font-semibold px-8 py-4 rounded-full text-white"
+              style={{ backgroundColor: '#2D5033', border: 'none' }}
+            >
+              Join our foodie community
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/beinghome.jpg";
 
 const Footer = () => {
   return (
@@ -8,9 +9,11 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="font-display font-bold text-3xl text-brand-gold mb-4">
-              Spice Route Co.
-            </h3>
+            <img
+              src={logo}
+              alt="Spice Craft Kitchen Logo"
+              className="h-16 w-auto object-contain mb-4"
+            />
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Bringing authentic Indian flavors to your home kitchen with premium ingredient packs and traditional recipes.
             </p>
@@ -107,7 +110,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-brand-gold" />
-                <span className="text-primary-foreground/80">hello@spiceroute.com</span>
+                <span className="text-primary-foreground/80">beinghomeindia@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-gold mt-1" />
@@ -124,7 +127,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-primary-foreground/60 text-sm">
-              © 2024 Spice Route Co. All rights reserved.
+              © 2024 Being Home Foods LLP. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-primary-foreground/60 hover:text-brand-gold transition-colors">

@@ -37,7 +37,7 @@ const RecipeInspiration = () => {
                 sourced directly from trusted Indian farms.
               </p>
 
-              <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-4 rounded-full">
+              <Button className="font-semibold px-8 py-4 rounded-full text-white" style={{ backgroundColor: '#2D5033' }}>
                 Join Our Foodie Community
               </Button>
             </div>
