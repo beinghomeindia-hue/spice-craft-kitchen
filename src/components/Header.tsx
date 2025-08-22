@@ -71,24 +71,33 @@ const Header = () => {
               <DrawerContent className="fixed inset-y-0 right-0 top-0 h-full w-64 rounded-none border-l bg-background flex flex-col p-6">
                 <nav className="flex flex-col items-start space-y-6 mt-8">
                   <button
-                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0"
+                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0 focus:outline-none active:text-secondary"
                     style={{ appearance: "none" }}
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
                       setOpen(false);
+                      setTimeout(() => {
+                        const el = document.getElementById("top-section");
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                      }, 300);
                     }}
                   >
                     Home
                   </button>
                   <button
-                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0"
+                    className="hover:text-secondary transition-colors font-medium text-foreground text-lg text-left cursor-pointer bg-transparent border-none p-0 focus:outline-none active:text-secondary"
                     style={{ appearance: "none" }}
                     onClick={() => {
-                      const el = document.getElementById("recipes");
-                      if (el) {
-                        el.scrollIntoView({ behavior: "smooth" });
-                      }
                       setOpen(false);
+                      setTimeout(() => {
+                        const el = document.getElementById("recipes");
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }, 300);
                     }}
                   >
                     Shop by Recipe
